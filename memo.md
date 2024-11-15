@@ -20,7 +20,7 @@ overviewSnapshots: true
 twoslash: true
 ---
 
-# jsファイルでも<br>型チェックを行う
+# jsが型安全になったっていい
 
 <div>
 Natsuki
