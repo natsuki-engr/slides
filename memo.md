@@ -17,12 +17,13 @@ transition: slide-left
 mdc: true
 # take snapshot for each slide in the overview
 overviewSnapshots: true
+layout: center
 twoslash: true
 ---
 
 # jsが型安全になったっていい
 
-<div>
+<div class="text-right">
 Natsuki
 </div>
 
@@ -32,7 +33,9 @@ layout: two-cols
 
 # 自己紹介
 
+<div class="m-y-8">
 Natsuki
+</div>
 
 普段はLaravel + Vueで開発
 
