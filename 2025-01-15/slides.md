@@ -82,7 +82,9 @@ https://marketplace.visualstudio.com/items?itemName=Natsuki.your-themes
 
 # 本題
 
-「Reactのいいなと思ったところ」
+<div class="text-center">
+  <h3>「Reactのいいなと思ったところ」</h3>
+</div>
 
 ---
 
@@ -98,7 +100,7 @@ https://marketplace.visualstudio.com/items?itemName=Natsuki.your-themes
 # 再レンダリングのサイクルが理解しやすい
 
 再レンダリングのときに基本的に全て再計算される
-再計算をスキップしたい場合に、useEffectやuseMemoを使う
+再計算や再処理をスキップしたい場合に、useEffectやuseMemoを使う
 
 ---
 
