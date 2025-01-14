@@ -83,28 +83,84 @@ https://marketplace.visualstudio.com/items?itemName=Natsuki.your-themes
 # 本題
 
 <div class="text-center">
-  <h3>「Reactのいいなと思ったところ」</h3>
+  <h2 class="absolute inset-0 m-auto opacity-100 text-6xl h-4">「Reactのいいなと思ったところ」</h2>
 </div>
-
----
-
-# 一貫してJS
-
-<ul>
-  <li>JSX</li>
-  <li>コンポーネント引数</li>
-</ul>
-
----
-
-# 再レンダリングのサイクルが理解しやすい
-
-再レンダリングのときに基本的に全て再計算される
-再計算や再処理をスキップしたい場合に、useEffectやuseMemoを使う
 
 ---
 
 # dangerouslySetInnerHtml
 
-「危険なんだぞ」という強い警告を感じる
+<div>
+  タグを含んだ文字列をHTMLタグとしてレンダリングしたい場合の`setInnerHtml`と同じ
+</div>
+<div>
+  XSS攻撃の危険性があるので、注意が必要
+</div>
 
+<div v-click>
+```tsx
+const markup = '<p>some raw html</p>';
+return <div dangerouslySetInnerHTML={{__html: markup}} />;
+```
+</div>
+
+<div v-click>
+vueだと`v-html`で同じ実装ができるが、罪悪感が無い
+
+「危険なんだぞ」という強い警告を感じるところがいい
+</div>
+
+<style>
+  pre.slidev-code {
+    font-size: 1.25rem !important;
+    margin-inline: .5rem;
+  }
+</style>
+
+---
+
+# 一貫してJS
+
+<div>
+JSを知っていれば大体書ける
+
+たとえばJSX
+</div>
+
+---
+
+# JSX
+
+<ul>
+  <li>JSXの構成はJSとタグなので、テンプレートのために必要な知識が少ない</li>
+  <li>JSのパラダイム/設計を持ち込める</li>
+</ul>
+
+```jsx
+function ItemList({ items }) {
+  if(items.length === 0) {
+    return <p>empty...</p>
+  }
+  
+  return (
+    <ul>
+      {items.map(item => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+---
+
+# レンダリング結果の更新が分かりやすい
+
+基本的に「再レンダリングのときに全て再計算される」と思っておいて、
+再計算や再処理をスキップしたい場合に、useEffectやuseMemoを使う
+
+---
+
+# ただの特徴とも取れる
+
+「優れている点」ではなく、
