@@ -30,35 +30,32 @@ Natsuki
 
 # 今日話すこと
 
-普段の業務ではVueを使用していて、去年の6月ごろにReactも業務外で勉強し始めました
+<div class="text-2xl">
+普段の業務ではVueを使用していて、最近Reactも業務外で勉強し始めました
 
-
-※「優れている」とは表現しない
-
----
-
-# 自己紹介
-
-<div class="m-y-8">
-Natsuki
+初心者の目線で「Reactのココいいな」と思った点を共有したいと思います
 </div>
 
-普段はLaravel + Vueで開発
+<div v-click class="mt-8">
+  <h3 class="opacity-100">自己紹介</h3>
 
-<div>
-  <img src="https://avatars.githubusercontent.com/u/63272932" />
-</div>
+  <div class="m-y-4">
+  Natsuki
+  </div>
 
-::right::
+  普段はLaravel + Vueで開発
 
-<div v-click>
-  <img src="/1731512017408.jpg" />
-  <p class="text-right">Vue Fes Japan 2024</p>
+  <div class="absolute right-8 rounded-full w-[150px] h-[150px] overflow-hidden">
+    <img src="https://avatars.githubusercontent.com/u/63272932" />
+  </div>
 </div>
 
 <style>
   h1 {
     line-height: 1;
+  }
+  h3 {
+    font-size: 1.75rem;
   }
 </style>
 
@@ -66,10 +63,14 @@ Natsuki
 
 # 宣伝
 
+<div>
 Reactを学ぶ上で、VSCodeの拡張機能を作ってみました。
+</div>
 
 Your Themes
-![capture of marketplace](/marketplace.png)
+<div class="h-[90vh] overflow-hidden">
+<img src="/marketplace.png">
+</div>
 https://marketplace.visualstudio.com/items?itemName=Natsuki.your-themes
 
 ---
