@@ -208,14 +208,16 @@ function ItemList({ items: Item[] }) {
 
 <div v-click>
   <div class="text-2xl my-4">
-  ・特定の再計算をスキップしたければ`useMemo`
+  ・特定の再計算をスキップしたければ<code class="text-orange">useMemo</code>
   </div>
   <div class="text-xl mb-4 ml-4">
     配列から値の検索とか
   </div>
+</div>
 
+<div v-click>
   <div class="text-2xl my-4">
-  ・特定の処理をスキップしたければ`useEffect`
+  ・特定の処理をスキップしたければ<code class="text-orange">useEffect</code>
   </div>
   <div class="text-xl mb-4 ml-4">
     APIの呼び出しとか
@@ -223,11 +225,17 @@ function ItemList({ items: Item[] }) {
 </div>
 
 ---
+layout: two-cols-header
+---
 
-# useEffect/useMemo
+# useEffect/useMemo の悪い例
 
-```tsx
-unction Form() {
+::left::
+
+## 不要な`useEffect`
+
+```tsx{all|6-8|all}
+function Form() {
   const [firstName, setFirstName] = useState('Taylor');
   const [lastName, setLastName] = useState('Swift');
 
@@ -235,20 +243,44 @@ unction Form() {
   useEffect(() => {
     setFullName(firstName + ' ' + lastName);
   }, [firstName, lastName]);
-  // ...
+
+  return /** ... */
 }
 ```
 
-<https://ja.react.dev/learn/you-might-not-need-an-effect#updating-state-based-on-props-or-state>
+::right::
 
-```tsx
-const [familyName, setFamilyName] = useState("");
-const [personalName, setPersonalName] = useState("");
-const fullName = familyName + " " + personalName; 
+## 不要な`useMemo`
+
+```tsx{all|5-8|all}
+function Form() {
+  const [firstName, setFirstName] = useState("Taylor");
+  const [lastName, setLastName] = useState("Swift");
+
+  const fullName = useMemo(
+    () => firstName + " " + lastName,
+    [firstName, lastName]
+  );
+
+  return; /** ... */
+}
 ```
 
----
+::bottom::
 
-# ただの特徴とも取れる
+```tsx
+const fullName = firstName + " " + lastName
+```
 
-「優れている点」ではなく、
+<style>
+  .two-cols-header {
+    grid-template-rows: 2.5rem 1fr;
+    grid-gap: 1em;
+  }
+  .col-left,.col-right {
+    margin-top: 1rem;
+  }
+  .col-bottom .slidev-code {
+    font-size: 1.5rem !important;
+  }
+</style>
