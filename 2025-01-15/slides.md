@@ -77,6 +77,9 @@ https://marketplace.visualstudio.com/items?itemName=Natsuki.your-themes
 
 demo
 
+<div class="text-sm">
+https://github.com/natsuki-engr/your-themes/blob/a1ce518a99009fd5baf489e592958c3c35b5dfcf/img/demo.gif
+</div>
 <img src="/demo.gif" />
 
 <!-- 「コードの色も反映する予定です」 -->
