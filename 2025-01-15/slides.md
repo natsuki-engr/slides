@@ -91,24 +91,36 @@ https://marketplace.visualstudio.com/items?itemName=Natsuki.your-themes
 
 # dangerouslySetInnerHtml
 
-<div>
+<div class="text-xl m-t-4">
   タグを含んだ文字列をHTMLタグとしてレンダリングしたい場合の`setInnerHtml`と同じ
 </div>
-<div>
+<div class="text-xl m-t-4">
   XSS攻撃の危険性があるので、注意が必要
 </div>
 
-<div v-click>
 ```tsx
 const markup = '<p>some raw html</p>';
 return <div dangerouslySetInnerHTML={{__html: markup}} />;
 ```
+
+<div v-click class="text-xl m-t-4">
+「危険なんだぞ」という強い警告を感じるところがいい
 </div>
 
-<div v-click>
-vueだと`v-html`で同じ実装ができるが、罪悪感が無い
+<div v-click class="text-xl m-t-6">
+vueだと<code>v-html</code>で同じ実装ができるが、罪悪感が無い
+</div>
 
-「危険なんだぞ」という強い警告を感じるところがいい
+<div v-click="3">
+
+```vue
+<script setup>
+const markup = '<p>some raw html</p>'
+</script>
+
+<div v-html="markup"></div>
+```
+
 </div>
 
 <style>
