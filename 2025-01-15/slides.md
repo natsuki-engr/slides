@@ -289,6 +289,14 @@ https://react.dev/learn/you-might-not-need-an-effect#updating-state-based-on-pro
 
 ---
 
+# なぜ今日この話をしようと思ったか
+
+<img src="/post.png" style="height: 400px">
+
+https://x.com/jordwalke/status/1875336115009573268
+
+---
+
 # 参考
 
 <div>
