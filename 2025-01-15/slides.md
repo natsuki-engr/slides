@@ -272,6 +272,8 @@ function Form() {
 const fullName = firstName + " " + lastName
 ```
 
+https://react.dev/learn/you-might-not-need-an-effect#updating-state-based-on-props-or-state
+
 <style>
   .two-cols-header {
     grid-template-rows: 2.5rem 1fr;
@@ -284,3 +286,21 @@ const fullName = firstName + " " + lastName
     font-size: 1.5rem !important;
   }
 </style>
+
+---
+
+# 参考
+
+<div>
+【React】誤解される useMemo と 誤用される useState ―― 「A の変更に反応して B の値が変わる」と考えるべきでない<br>
+https://qiita.com/honey32/items/58e56e407d4d87e294a4
+
+【React】useEffect の標準動作は「依存配列の中身が変わると実行」ではない<br>
+https://qiita.com/honey32/items/62edf5165aced7d0c4bf
+
+useState + useEffect -> 再レンダリング中に毎回計算 (重ければ useMemo)<br>
+https://scrapbox.io/honey32/useState_+_useEffect_-%3E_%E5%86%8D%E3%83%AC%E3%83%B3%E3%83%80%E3%83%AA%E3%83%B3%E3%82%B0%E4%B8%AD%E3%81%AB%E6%AF%8E%E5%9B%9E%E8%A8%88%E7%AE%97_(%E9%87%8D%E3%81%91%E3%82%8C%E3%81%B0_useMemo)
+
+props または state に基づいて state を更新する - そのエフェクトは不要かも<br>
+https://ja.react.dev/learn/you-might-not-need-an-effect#updating-state-based-on-props-or-state
+</div>
