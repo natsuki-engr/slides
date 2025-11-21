@@ -32,44 +32,147 @@ Natsuki
 
 # PHPStan使ってますか
 
+```php{all|6,10}
+<?php
+
+class User {
+  public function __construct(
+    public string $name,
+    public ?int $age
+  ) {}
+
+	public function nextAge(): int {
+		return $this->age + 1;
+	}
+}
+```
+
+<div v-click>
+  <img src="/image.png" />
+</div>
+
 
 ---
 
 # VSCodeのエラーは見づら過ぎる!!
 
-<!-- 米倉涼子 -->
+```php
+/**
+ * @return array{
+ *     id: int,
+ *     name: string,
+ *     // ...
+ * }
+ */
+function getProfile(): array
+{
+  return [
+    'id' => 123,
+    'name' => 'John Doe',
+    // ...
+  ];
+}
+```
 
+<div v-click>
+  <img src="/long-phpstan-error.png" />
+</div>
 
 ---
 
 # pretty-ts-errorsみたいなのが欲しい
 
+<div v-click>
+  <img src="/ext-pretty-ts-errors.png" />
+</div>
+
+<div v-click>
+  <img src="/pretty-ts-errors-comparison.png" />
+</div>
+
+<div v-click>
+  こんな風になったらなと思ってた
+</div>
 
 ---
 
-# エラーをパスーすればいいのでは
+# エラー文をパスーすればいいのでは
 
-PHP勉強会@東京でのきんじょうさんの話
-Umeda.rbにてわいださんがyaccを紹介
-=> パーサージェネレーターがあればパーサーを作れる？
+<p>php-yacc</p>
+
+<p>第179回 PHP勉強会＠東京でのきんじょうさんの話</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dObaHQD_jic?si=BaRIWfXzZ91C3UHt&amp;start=6741" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+https://www.youtube.com/live/dObaHQD_jic?si=qmN3z1ZGNNnTKwPZ&t=6736
+
+---
+
+# エラー文をパスーすればいいのでは
+
+<p>racc</p>
+
+<p>Umeda.rbにてわいださんのraccの話</p>
+
+<div v-click>
+  <p>これはぺちこん関西2025でのトーク</p>
+
+  <iframe width="560" height="315" src="https://speakerdeck.com/player/45bf47f208fb4a58b42854b5ce009d59"></iframe>
+</div>
+
+<p v-click>
+  => パーサージェネレーターがあれば簡単にパーサーを作れる？
+</p>
 
 
 ---
 
-# もうひとつのアプローチ
+# パーサーを使わないアプローチ
 
 パーサーは作らずエラーパターンからマッチさせる
-エラーパターンの変更を追従するのが大変 & プラグインの数だけ対応が必要
 
-=> 汎用的にエラー文をパースできた方がいい
+<div>
+  <img src="/long-phpstan-error.png" />
+</div>
 
+<p v-click>
+  <pre>
+  /Function <code>パターン</code> should return <code>パターン</code> but returns ./
+  </pre>
+</p>
+
+<p v-click>
+エラーの種類だけ、パターンマッチで拾う
+</p>
+
+<ul>
+  <li v-click>エラーパターンの変更を追従するのが大変 & プラグインの数だけ対応が必要</li>
+  <li v-click>=> 汎用的にエラー文をパースできた方がいい</li>
+</ul>
+
+<style>
+  p {
+    margin: 1rem 0;
+  }
+  
+  pre {
+    font-size: 1.5rem !important;
+    color: #dba226ff;
+  }
+  pre code {
+    color: #50fa7b;
+  }
+</style>
 
 ---
 
 # Chevrotain
 
+<iframe width="560" height="315" src="https://github.com/chevrotain/chevrotain">
+
+- TypeScript製のパーサージェネレーター
+
 - マメジカ
-- js
 - グラフが見れる
 
 
