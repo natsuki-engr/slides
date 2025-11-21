@@ -19,6 +19,7 @@ mdc: true
 overviewSnapshots: true
 layout: center
 twoslash: true
+colorSchema: dark
 ---
 
 # jsが型安全になったっていい
