@@ -144,9 +144,9 @@ layout: two-cols-header
   <img src="/long-phpstan-error.png" />
 </div>
 
-<p v-click>
+<div v-click>
   <pre>/Function <code>関数名</code> should return <code>型(array{...})</code> but returns <code>型(array{...})</code>./</pre>
-</p>
+</div>
 
 <p v-click>
 エラーの種類だけ、パターンマッチで拾う
