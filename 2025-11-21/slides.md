@@ -48,9 +48,8 @@ class User {
 ```
 
 <div v-click>
-  <img src="/image.png" />
+  <img src="/phpstan-playground.png" />
 </div>
-
 
 ---
 
@@ -204,47 +203,174 @@ https://github.com/yoavbls/pretty-ts-errors/blob/8527285178e9a88c80ad63fa7f01291
 - マメジカ
 <img src="https://preview.aflo.com/jFBj9j66IdjO/aflo_31160821.jpg" />
 
-- グラフが見れる
-
-
 ---
 
 # 例
 
+<div style="display: flex; justify-content: center;">
+  <img width="50%" src="/json-parser-diagram.png" />
+</div>
+
+https://chevrotain.io/playground/
+
+---
+layout: two-cols-header
+---
+
+# 例
+
+::left::
+
+```js{all|3-8|10-19}
+class JsonParser extends CstParser {
+  constructor() {
+    this.RULE("json", () => {
+      this.OR([
+        { ALT: () => this.SUBRULE(this.object) },
+        { ALT: () => this.SUBRULE(this.array) },
+      ]);
+    });
+
+    this.RULE("object", () => {
+      this.CONSUME(LCurly);
+      this.MANY_SEP({
+        SEP: Comma,
+        DEF: () => {
+          this.SUBRULE(this.objectItem);
+        },
+      });
+      this.CONSUME(RCurly);
+    });
+
+    this.RULE("objectItem", () => {
+      this.CONSUME(StringLiteral);
+      this.CONSUME(Colon);
+      this.SUBRULE(this.value);
+    });
+    
+    // ...
+  }
+}
+```
+
+::right::
+
+<img width="100%" src="/json-parser-diagram.png" />
 
 ---
 
-# パース難しい
+# パーサーの定義の前に字句解析(Lexer)
 
-```txt
-Method bar ...
-The method might has ...
+```js
+const True = createToken({ name: "True", pattern: /true/ });
+const False = createToken({ name: "False", pattern: /false/ });
+const Null = createToken({ name: "Null", pattern: /null/ });
+const LCurly = createToken({ name: "LCurly", pattern: /{/ });
+const RCurly = createToken({ name: "RCurly", pattern: /}/ });
 ```
 
+<style>
+  pre {
+    font-size: 1.2rem !important;
+  }
+</style>
+
+---
+
+# phpstan-error-parserを作っています
+
+<img width="60%" src="/phpstan-error-parser-diagram.png">
+
+https://github.com/natsuki-engr/phpstan-error-parser
+
+---
+
+# 使い方
+
+```ts
+import { parse } from 'phpstan-error-parser';
+
+const result = parse('PHPDoc tag @mixin contains unresolvable type.')
+```
+
+```json
+[
+  {
+    type: 'common_word',
+    value: 'PHPDoc',
+    location: {
+      startColumn: 0,
+      endColumn: 6,
+    },
+  },
+  {
+    type: 'common_word',
+    value: 'tag',
+    location: {
+      startColumn: 7,
+      endColumn: 10,
+    },
+  },
+  {
+    type: 'doc_tag',
+    value: '@mixin',
+    location: {
+      startColumn: 11,
+      endColumn: 17,
+    },
+  },
+  {
+    type: 'common_word',
+    value: 'contains',
+    location: {
+      startColumn: 18,
+      endColumn: 26,
+    },
+  },
+  {
+    type: 'common_word',
+    value: 'unresolvable',
+    location: {
+      startColumn: 27,
+      endColumn: 39,
+    },
+  },
+  {
+    type: 'common_word',
+    value: 'type',
+    location: {
+      startColumn: 40,
+      endColumn: 44,
+    },
+  },
+  {
+    type: 'period',
+    value: '.',
+    location: {
+      startColumn: 44,
+      endColumn: 45,
+    },
+  },
+];
+```
 
 ---
 
 # VSCode拡張の組み込み
 
+<p>アプローチは二つ</p>
 
----
-
-# アプローチは二つ
-
-- pretty-ts-errorsのように別拡張として提供
-  - 新たにインストールしてもらう必要がある
-- phpstan-vscode自体に組み込む
-
+<ul>
+  <li v-click>pretty-ts-errorsのように別拡張として提供</li>
+  <li v-click>phpstan-vscode自体に組み込む</li>
+</ul>
 
 ---
 
 # pretty-ts-errorsとphpstan-vscodeがエラーを表示している仕組み
 
-- pretty-ts-errors
-  - Diagnostic
-- phpstan-vscode
-  - HoverProvider
-
+- pretty-ts-errors ⇒ `Diagnostic`
+- phpstan-vscode ⇒ `HoverProvider`
 
 ---
 
@@ -252,39 +378,95 @@ The method might has ...
 
 場所とメッセージを渡すとエラー表示してくれる
 
-<!-- API仕様 -->
-```json
+```ts
+interface Diagnostic {
+	range: Range;
+
+	severity?: DiagnosticSeverity;
+
+	source?: string;
+
+	message: string;
+}
 ```
 
+https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#diagnostic
+
+<div v-click>
+phpstan-vscodeはPHPStanの結果をこれでVSCodeに渡している
+</div>
+
+<span v-click>
+  messageにMarkdownを渡せばリッチな表示ができる？
+</span>
+<span v-click>⇒ できない🙅</span>
+
+<style>
+  a {
+    color: #7f7f7fff;
+    font-size: 0.6em;
+  }
+</style>
 ---
 
 # HoverProvider
 
 ホバーイベントに応じてメッセージを返す
 
-<!-- API仕様 -->
-```json
+```json{all|5}
+interface Hover {
+	/**
+	 * The hover's content
+	 */
+	contents: MarkedString | MarkedString[] | MarkupContent;
+
+	/**
+	 * An optional range is a range inside a text document
+	 * that is used to visualize a hover, e.g. by changing the background color.
+	 */
+	range?: Range;
+}
 ```
 
+https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_hover
+
+<div v-click>
+  `Hover`ではcontentsにMarkdownを渡せばリッチな表示ができる❗️❗️
+</div>
+
+<style>
+  a {
+    color: #7f7f7fff;
+    font-size: 0.6em;
+  }
+</style>
 ---
 
-# MarkdownはHoverProviderにしか使える
+# pretty-ts-errorsでもそれによるDiscussionがある
 
----
+https://github.com/yoavbls/pretty-ts-errors/discussions/43
 
-# pretty-ts-errorsでもそれによるissueがある
-
-Hide Unformatted TypeScript errors / move to after the pretty errors
-https://github.com/yoavbls/pretty-ts-errors/issues/3
+<img src="/discussion.png" />
 
 ---
 
 # LSP 3.18 ならDiagnosticにもMarkdownが使える
 
-# いつになるか分からないのでHoverProviderで実装する
+<img src="/lsp-3-18.png" />
 
----
+https://microsoft.github.io/language-server-protocol/specifications/lsp/3.18/specification/#diagnostic
 
-# ちなみにpretty-ts-errorsの対応方針
+いつになるか分からないので
 
-TS server plugin
+別拡張としてphpstan-error-parserでパースして、HoverProviderで実装する予定
+
+<div v-click style="display: flex; justify-content: center; margin-top: 2rem; font-size: 2rem;">
+おしまい
+</div>
+
+<style>
+  a {
+    color: #7f7f7fff;
+    font-size: 0.6em;
+  }
+</style>
