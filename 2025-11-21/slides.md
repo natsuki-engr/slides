@@ -96,7 +96,7 @@ function getProfile(): array
 
 ---
 
-# エラー文をパスーすればいいのでは
+# エラー文をパスーすればいいのでは(1)
 
 <p>php-yacc</p>
 
@@ -106,24 +106,34 @@ function getProfile(): array
 
 https://www.youtube.com/live/dObaHQD_jic?si=qmN3z1ZGNNnTKwPZ&t=6736
 
+<p v-click>PHP-astとか作ったあのNikita作</p>
+
+---
+layout: two-cols-header
 ---
 
-# エラー文をパスーすればいいのでは
+# エラー文をパスーすればいいのでは(2)
+
+::left::
 
 <p>racc</p>
 
-<p>Umeda.rbにてわいださんのraccの話</p>
+<p>Umeda.rbにて わいださん のraccの話</p>
+<img style="width: 100%; height: auto;" src="/umeda-rb.png" />
+
+
+::right::
 
 <div v-click>
-  <p>これはぺちこん関西2025でのトーク</p>
-
-  <iframe width="560" height="315" src="https://speakerdeck.com/player/45bf47f208fb4a58b42854b5ce009d59"></iframe>
+  <p>ぺちこん関西2025でのトーク</p>
+  <iframe :width="560 * 0.8" :height="315 * 0.8" src="https://speakerdeck.com/player/45bf47f208fb4a58b42854b5ce009d59?slide=18"></iframe>
 </div>
 
-<p v-click>
-  => パーサージェネレーターがあれば簡単にパーサーを作れる？
-</p>
+::bottom::
 
+<div v-click>
+  LRパーサーとか難しいのでなんとなくの理解
+</div>
 
 ---
 
@@ -136,9 +146,7 @@ https://www.youtube.com/live/dObaHQD_jic?si=qmN3z1ZGNNnTKwPZ&t=6736
 </div>
 
 <p v-click>
-  <pre>
-  /Function <code>パターン</code> should return <code>パターン</code> but returns ./
-  </pre>
+  <pre>/Function <code>関数名</code> should return <code>型(array{...})</code> but returns <code>型(array{...})</code>./</pre>
 </p>
 
 <p v-click>
@@ -156,7 +164,7 @@ https://www.youtube.com/live/dObaHQD_jic?si=qmN3z1ZGNNnTKwPZ&t=6736
   }
   
   pre {
-    font-size: 1.5rem !important;
+    font-size: 1.1rem !important;
     color: #dba226ff;
   }
   pre code {
@@ -166,13 +174,36 @@ https://www.youtube.com/live/dObaHQD_jic?si=qmN3z1ZGNNnTKwPZ&t=6736
 
 ---
 
-# Chevrotain
+# ちなみにpretty-ts-errorsは正規表現
 
-<iframe width="560" height="315" src="https://github.com/chevrotain/chevrotain">
+```js{all|3|5-9}
+message
+.replaceAll(
+  /(is missing the following properties from type\s?)'(.*)': ((?:#?\w+, )*(?:(?!and)\w+)?)/g,
+  (_, pre, type, post) =>
+    `${pre}${formatTypeBlock("", type, codeBlock)}: <ul>${post
+      .split(", ")
+      .filter(Boolean)
+      .map((prop: string) => `<li>${prop}</li>`)
+      .join("")}</ul>`
+  )
+```
+
+https://github.com/yoavbls/pretty-ts-errors/blob/8527285178e9a88c80ad63fa7f0129192b67bad2/packages/formatter/src/formatDiagnosticMessage.ts#L4
+
+<div v-click>
+  TSはエラーパターンが決まってるからできる
+</div>
+
+---
+
+# Chevrotain
 
 - TypeScript製のパーサージェネレーター
 
 - マメジカ
+<img src="https://preview.aflo.com/jFBj9j66IdjO/aflo_31160821.jpg" />
+
 - グラフが見れる
 
 
