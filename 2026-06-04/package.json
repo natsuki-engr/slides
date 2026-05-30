@@ -8,6 +8,7 @@
     "export": "slidev export"
   },
   "dependencies": {
+    "@katzumi/slidev-addon-ogp-image": "^0.0.5",
     "@slidev/cli": "^52.15.2",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
