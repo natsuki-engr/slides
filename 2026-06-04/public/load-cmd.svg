@@ -3,48 +3,66 @@
 <svg width="100%" height="100%" viewBox="0 0 1600 680" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
     <path d="M1600,30L1600,650C1600,666.557 1586.557,680 1570,680L30,680C13.443,680 0,666.557 0,650L0,30C0,13.443 13.443,0 30,0L1570,0C1586.557,0 1600,13.443 1600,30Z" style="fill:url(#_Linear1);"/>
     <g>
-        <g transform="matrix(1,0,0,1,15,0)">
+        <g transform="matrix(1,0,0,1,15,-40)">
             <path d="M440,90L440,140C440,151.038 431.038,160 420,160L100,160C88.962,160 80,151.038 80,140L80,90C80,78.962 88.962,70 100,70L420,70C431.038,70 440,78.962 440,90Z" style="fill:rgb(233,255,241);stroke:rgb(203,213,225);stroke-width:1px;"/>
         </g>
-        <g transform="matrix(0.792857,0,0,1,165.714286,0)">
+        <g transform="matrix(0.792857,0,0,1,165.714286,-40)">
             <path d="M1080,90L1080,140C1080,151.038 1068.697,160 1054.775,160L545.225,160C531.303,160 520,151.038 520,140L520,90C520,78.962 531.303,70 545.225,70L1054.775,70C1068.697,70 1080,78.962 1080,90Z" style="fill:rgb(243,229,255);stroke:rgb(203,213,225);stroke-width:1px;"/>
         </g>
-        <g transform="matrix(1,0,0,1,-9,0)">
+        <g transform="matrix(1,0,0,1,-9,-40)">
             <path d="M1520,90L1520,140C1520,151.038 1511.038,160 1500,160L1160,160C1148.962,160 1140,151.038 1140,140L1140,90C1140,78.962 1148.962,70 1160,70L1500,70C1511.038,70 1520,78.962 1520,90Z" style="fill:rgb(241,241,241);stroke:rgb(203,213,225);stroke-width:1px;"/>
         </g>
     </g>
-    <g transform="matrix(1,0,0,1,275.28,125.598)">
+    <g transform="matrix(1,0,0,1,275.28,85.598)">
         <text x="-56px" y="0px" style="font-family:'HiraginoSans-W7', 'Hiragino Sans', sans-serif;font-weight:700;font-size:28px;fill:rgb(21,128,61);">フロント</text>
     </g>
-    <g transform="matrix(1,0,0,1,799.781742,125.346)">
+    <g transform="matrix(1,0,0,1,799.781742,85.346)">
         <text x="-84.786px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:28px;fill:rgb(126,34,206);">PHP</text>
         <text x="-27.214px" y="0px" style="font-family:'HiraginoSans-W7', 'Hiragino Sans', sans-serif;font-weight:700;font-size:28px;fill:rgb(126,34,206);">サーバー</text>
     </g>
-    <g transform="matrix(1,0,0,1,1320.651367,122.4375)">
+    <g transform="matrix(1,0,0,1,1320.651367,82.4375)">
         <text x="-91.793px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:28px;fill:rgb(51,65,85);">SuperCollider</text>
     </g>
     <g>
-        <path d="M480,216L480,634C480,648.35 468.35,660 454,660L96,660C81.65,660 70,648.35 70,634L70,216C70,201.65 81.65,190 96,190L454,190C468.35,190 480,201.65 480,216Z" style="fill:rgb(233,255,241);stroke:rgb(203,213,225);stroke-width:1px;"/>
-        <path d="M1055,216L1055,634C1055,648.35 1043.35,660 1029,660L571,660C556.65,660 545,648.35 545,634L545,216C545,201.65 556.65,190 571,190L1029,190C1043.35,190 1055,201.65 1055,216Z" style="fill:rgb(242,227,255);stroke:rgb(203,213,225);stroke-width:1px;"/>
-        <path d="M1530,216L1530,634C1530,648.35 1518.35,660 1504,660L1136,660C1121.65,660 1110,648.35 1110,634L1110,216C1110,201.65 1121.65,190 1136,190L1504,190C1518.35,190 1530,201.65 1530,216Z" style="fill:rgb(241,241,241);stroke:rgb(203,213,225);stroke-width:1px;"/>
-        <g transform="matrix(1.026151,0.021754,0.021754,1.018096,-17.507059,-14.563394)">
-            <g transform="matrix(0.974957,-0.020832,-0.020832,0.98267,16.765234,13.946301)">
+        <g transform="matrix(1,0,0,1.102128,0,-67.404255)">
+            <path d="M480,213.591L480,636.409C480,649.429 468.35,660 454,660L96,660C81.65,660 70,649.429 70,636.409L70,213.591C70,200.571 81.65,190 96,190L454,190C468.35,190 480,200.571 480,213.591Z" style="fill:rgb(233,255,241);stroke:rgb(203,213,225);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1.102128,0,-67.404255)">
+            <path d="M1055,213.591L1055,636.409C1055,649.429 1043.35,660 1029,660L571,660C556.65,660 545,649.429 545,636.409L545,213.591C545,200.571 556.65,190 571,190L1029,190C1043.35,190 1055,200.571 1055,213.591Z" style="fill:rgb(242,227,255);stroke:rgb(203,213,225);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1.102128,0,-67.404255)">
+            <path d="M1530,213.591L1530,636.409C1530,649.429 1518.35,660 1504,660L1136,660C1121.65,660 1110,649.429 1110,636.409L1110,213.591C1110,200.571 1121.65,190 1136,190L1504,190C1518.35,190 1530,200.571 1530,213.591Z" style="fill:rgb(241,241,241);stroke:rgb(203,213,225);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(0.926776,-0.060912,-0.060912,0.94933,68.019764,56.582812)">
+            <g transform="matrix(1.083579,0.069526,0.069526,1.057835,-77.63872,-64.584422)">
                 <path d="M557.842,334.332L572,357.159L546.977,347.393L557.842,334.332Z"/>
-                <path d="M454,259C454,259 524.228,317.42 556.327,344.122" style="fill:none;stroke:black;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+                <path d="M473,274.805C473,274.805 528.417,320.904 556.327,344.122" style="fill:none;stroke:black;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
             </g>
         </g>
     </g>
-    <path d="M275,190L275,660" style="fill:none;fill-rule:nonzero;stroke:rgb(203,213,225);stroke-width:3px;stroke-dasharray:10,10;"/>
-    <path d="M800,190L800,660" style="fill:none;fill-rule:nonzero;stroke:rgb(203,213,225);stroke-width:3px;stroke-dasharray:10,10;"/>
-    <path d="M1320,190L1320,660" style="fill:none;fill-rule:nonzero;stroke:rgb(203,213,225);stroke-width:3px;stroke-dasharray:10,10;"/>
+    <g transform="matrix(1,0,0,1.102128,0,-67.404255)">
+        <path d="M275,190L275,660" style="fill:none;fill-rule:nonzero;stroke:rgb(203,213,225);stroke-width:3px;stroke-dasharray:10,10;"/>
+    </g>
+    <g transform="matrix(1,0,0,1.102128,0,-67.404255)">
+        <path d="M800,190L800,660" style="fill:none;fill-rule:nonzero;stroke:rgb(203,213,225);stroke-width:3px;stroke-dasharray:10,10;"/>
+    </g>
+    <g transform="matrix(1,0,0,1.102128,0,-67.404255)">
+        <path d="M1320,190L1320,660" style="fill:none;fill-rule:nonzero;stroke:rgb(203,213,225);stroke-width:3px;stroke-dasharray:10,10;"/>
+    </g>
     <g>
-        <g transform="matrix(1,0,0,1,0,-297)">
+        <g transform="matrix(1,0,0,1,0,-267)">
             <path d="M445,526L445,582C445,590.831 437.831,598 429,598L121,598C112.169,598 105,590.831 105,582L105,526C105,517.169 112.169,510 121,510L429,510C437.831,510 445,517.169 445,526Z" style="fill:white;stroke:rgb(203,213,225);stroke-width:1px;"/>
         </g>
-        <g transform="matrix(1,0,0,1,275,246)">
+        <g transform="matrix(1,0,0,0.659091,0,-175.284213)">
+            <path d="M445,534.276L445,573.724C445,587.122 437.831,598 429,598L121,598C112.169,598 105,587.122 105,573.724L105,534.276C105,520.878 112.169,510 121,510L429,510C437.831,510 445,520.878 445,534.276Z" style="fill:white;stroke:rgb(203,213,225);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,275,276)">
             <text x="-53.726px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(21,128,61);">W<tspan x="-35.2px -24.077px " y="0px 0px ">eb</tspan>Socket</text>
         </g>
-        <g transform="matrix(1,0,0,1,275,273)">
+        <g transform="matrix(1,0,0,1,275,195.852151)">
+            <text x="-20px" y="0px" style="font-family:'HiraginoSans-W7', 'Hiragino Sans', sans-serif;font-weight:700;font-size:20px;fill:rgb(21,128,61);">録音</text>
+        </g>
+        <g transform="matrix(1,0,0,1,275,303)">
             <text x="-72.316px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(21,128,61);">W<tspan x="-57.801px -48.309px " y="0px 0px ">AV</tspan></text>
             <text x="-33.191px" y="0px" style="font-family:'HiraginoSans-W4', 'Hiragino Sans', sans-serif;font-size:16px;fill:rgb(21,128,61);">を</text>
             <text x="-12.746px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(21,128,61);">PHP</text>
@@ -52,24 +70,24 @@
         </g>
     </g>
     <g>
-        <g transform="matrix(1,0,0,1,0,-11)">
+        <g transform="matrix(1,0,0,1,0,25)">
             <path d="M1015,341L1015,391C1015,399.831 1007.831,407 999,407L601,407C592.169,407 585,399.831 585,391L585,341C585,332.169 592.169,325 601,325L999,325C1007.831,325 1015,332.169 1015,341Z" style="fill:white;stroke:rgb(203,213,225);stroke-width:1px;"/>
         </g>
-        <g transform="matrix(1,0,0,1,800,347)">
+        <g transform="matrix(1,0,0,1,800,383)">
             <text x="-54.824px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(126,34,206);">W<tspan x="-37.041px -24.072px " y="0px 0px ">AV</tspan></text>
             <text x="-5.176px" y="0px" style="font-family:'HiraginoSans-W7', 'Hiragino Sans', sans-serif;font-weight:700;font-size:20px;fill:rgb(126,34,206);">を保存</text>
         </g>
-        <g transform="matrix(1,0,0,1,800,374)">
+        <g transform="matrix(1,0,0,1,800,410)">
             <text x="-37.5px" y="0px" style="font-family:'HiraginoSans-W4', 'Hiragino Sans', sans-serif;font-size:15px;fill:rgb(126,34,206);">ファイル化</text>
         </g>
-        <g transform="matrix(1,0,0,0.861111,0,-12.833333)">
+        <g transform="matrix(1,0,0,0.861111,0,23.166667)">
             <path d="M1015,516.581L1015,587.419C1015,597.674 1007.831,606 999,606L601,606C592.169,606 585,597.674 585,587.419L585,516.581C585,506.326 592.169,498 601,498L999,498C1007.831,498 1015,506.326 1015,516.581Z" style="fill:white;stroke:rgb(203,213,225);stroke-width:1px;"/>
         </g>
-        <g transform="matrix(1,0,0,1,800,452)">
+        <g transform="matrix(1,0,0,1,800,488)">
             <text x="-41.67px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(126,34,206);">OSC</text>
             <text x="1.67px" y="0px" style="font-family:'HiraginoSans-W7', 'Hiragino Sans', sans-serif;font-weight:700;font-size:20px;fill:rgb(126,34,206);">送信</text>
         </g>
-        <g transform="matrix(1,0,0,1,800,482)">
+        <g transform="matrix(1,0,0,1,800,518)">
             <text x="-77.223px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(126,34,206);">PHP</text>
             <text x="-40.16px" y="0px" style="font-family:'HiraginoSans-W4', 'Hiragino Sans', sans-serif;font-size:16px;fill:rgb(126,34,206);">→</text>
             <text x="-19.715px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(126,34,206);">SuperCollider</text>
@@ -87,14 +105,18 @@
         </g>
     </g>
     <g>
-        <g transform="matrix(1,0,0,1,34,-141)">
+        <g transform="matrix(1,0,0,1,68,-131)">
             <path d="M597,416L597,436C597,441.519 592.519,446 587,446L435,446C429.481,446 425,441.519 425,436L425,416C425,410.481 429.481,406 435,406L587,406C592.519,406 597,410.481 597,416Z" style="fill:white;stroke:rgb(203,213,225);stroke-width:1.5px;stroke-linecap:round;"/>
         </g>
-        <g transform="matrix(1,0,0,1,545,292)">
+        <g transform="matrix(1,0,0,1,579,302)">
             <text x="-53.726px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:rgb(21,128,61);">W<tspan x="-35.2px -24.077px " y="0px 0px ">eb</tspan>Socket</text>
         </g>
-        <path d="M1129.189,552.106L1141,578L1116.015,564.372L1129.189,552.106Z"/>
-        <path d="M1033,462C1033,462 1096.734,530.455 1126.281,562.191" style="fill:none;stroke:black;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+        <g transform="matrix(0.899929,-0.107484,-0.107484,0.884554,176.307242,189.367038)">
+            <g transform="matrix(1.127564,0.137013,0.137013,1.147162,-224.743298,-241.39095)">
+                <path d="M1129.189,552.106L1141,578L1116.015,564.372L1129.189,552.106Z"/>
+                <path d="M1056.276,487C1056.276,487 1102.017,536.13 1126.281,562.191" style="fill:none;stroke:black;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+            </g>
+        </g>
         <g transform="matrix(1,0,0,1,34,18)">
             <path d="M1158,460L1158,480C1158,485.519 1153.519,490 1148,490L1010,490C1004.481,490 1000,485.519 1000,480L1000,460C1000,454.481 1004.481,450 1010,450L1148,450C1153.519,450 1158,454.481 1158,460Z" style="fill:white;stroke:rgb(203,213,225);stroke-width:1.5px;stroke-linecap:round;"/>
         </g>

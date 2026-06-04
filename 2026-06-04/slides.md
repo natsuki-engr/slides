@@ -37,7 +37,7 @@ Natsuki
 
 とりあえず見てもらった方が
 
-<SlidevVideo src="/2026-06-02 01-22-56.mov" autoplay controls style="width: 80%;" />
+<SlidevVideo src="/2026-06-02 01-22-56.mov" controls style="width: 80%;" />
 
 ---
 
@@ -71,6 +71,12 @@ layout: center
 - ReactPHP (valzargaming/php-osc)
 - GUI (Vue)
 
+<style>
+  li {
+    font-size: 1.5em;
+  }
+</style>
+
 ---
 
 # SuperCollider とは
@@ -78,14 +84,22 @@ layout: center
 <div style="display: flex; justify-content: space-between;">
   <ul>
     <li>音響合成用プログラミング言語 (IDE)</li>
-    <li>EDMの制作などに使われる</li>
     <li>OSC(Open Sound Control)というプロトコルでも外部と通信できる</li>
   </ul>
   
-  <img src="https://scsynth.org/uploads/default/original/1X/4727150d43766eb27cf9ab704c719659c3dbba80.png" style="width: 15em;" />
 </div>
+<img
+  src="https://scsynth.org/uploads/default/original/1X/4727150d43766eb27cf9ab704c719659c3dbba80.png"
+  style="width: 15em; position: absolute; top: 1em; right: 1em;"
+/>
 
 <img v-click src="./scd-sample.png" />
+
+<style>
+  li {
+    font-size: 1.5em;
+  }
+</style>
 
 ---
 
@@ -149,7 +163,7 @@ OSCを送信するために valzargaming/php-osc を使用
 
 以下を実行すればOSCが送られる
 
-```php [server.php] {all|4-5|7-9}
+```php [server.php] {all|4-5|7-9|all}
 $client = new \PhpOSC\OSCClient($loop);
 $client->set_destination('127.0.0.1', 57120);
 
@@ -214,4 +228,58 @@ $promise = $client->sendAsync(
   font-size: 3em;
   line-height: 1.2;
 }
+</style>
+
+---
+
+# そんな素晴らしい機会が明日！！
+
+<div></div>
+
+<div>
+ふろぺち
+</div>
+
+<img
+  src="https://fortee.jp/files/frontend-phpcon-do-2026/image/banner.png"
+  style="width: 90%; position: absolute; bottom: -1em; right: 1em;"
+/>
+
+---
+
+# 自己紹介
+
+<div>
+兵庫県から来ました
+</div>
+
+<img src="./port-tower.png" />
+
+---
+
+# なんで今日来たの？
+
+<div></div>
+
+<p>
+<p v-click>
+  A. たまにお隣の<span>岡山とか広島</span>のカンファレンスに行くので、<span>「えいっ」</span>て足を伸ばしたら届きました。
+</p>
+<p v-click>
+  タイミング的にも<span>「ふろぺち」</span>とタイミングがちょうどよかった。<br>
+</p>
+<p v-click>
+  あと、1-9歳の間、<span>大分県</span>で育ったので、九州に来る理由が欲しい
+</p>
+</p>
+
+<style>
+  p {
+    font-size: 1.2em; line-height: 1.5;
+  }
+  span {
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: nowrap;
+  }
 </style>
